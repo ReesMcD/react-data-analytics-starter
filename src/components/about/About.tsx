@@ -1,11 +1,12 @@
-import Navbar from "./NavBar";
+import Navbar from "../navbar/NavBar";
 
 function About() {
   return (
-    <div>
+    <>
       <Navbar />
       <h1>About</h1>
-    </div>
+      <p>About page</p>
+    </>
   );
 };
 
