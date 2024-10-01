@@ -13,5 +13,3 @@ test("should render application with navigation", async () => {
   await user.click(screen.getByText(/about/i));
   expect(screen.getByText(/About page/i)).toBeInTheDocument();
 });
-
-

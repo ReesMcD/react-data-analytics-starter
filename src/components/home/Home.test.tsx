@@ -2,11 +2,11 @@ import "@testing-library/jest-dom";
 import { act, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import renderWithRouter from "../../utils/test/renderWithRouter";
-import About from "./About";
+import Home from "./Home";
 
-describe("About Component", () => {
+describe("Home Component", () => {
   test("should render with initial state of 1", async () => {
-    renderAbout();
+    renderHome();
 
     expect(await screen.findByText(/^1$/)).toBeInTheDocument();
     expect(
@@ -17,7 +17,7 @@ describe("About Component", () => {
   test("should increase count by clicking a button", async () => {
     const user = userEvent.setup();
 
-    renderAbout();
+    renderHome();
 
     expect(await screen.findByText(/^1$/)).toBeInTheDocument();
 
@@ -29,6 +29,6 @@ describe("About Component", () => {
   });
 });
 
-const renderAbout = () => {
-  return renderWithRouter(<About />);
+const renderHome = () => {
+  return renderWithRouter(<Home />);
 };

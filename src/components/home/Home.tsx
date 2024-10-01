@@ -1,12 +1,17 @@
+import { useCounterStore } from "../../stores/counter";
 import Navbar from "../navbar/NavBar";
 
-function Home() {
+function Home(): React.ReactNode {
+  const { count, inc } = useCounterStore();
+
   return (
-    <div>
+    <>
       <Navbar />
       <h1>Home</h1>
       <p>Home page</p>
-    </div>
+      <p>{count}</p>
+      <button onClick={inc}>One Up</button>
+    </>
   );
 }
 
