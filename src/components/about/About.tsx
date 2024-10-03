@@ -1,17 +1,21 @@
 import { useCounterStore } from "../../stores/counter";
-import Navbar from "../navbar/NavBar";
+import PageWrapper from "../page-wrapper/PageWrapper";
 
 function About(): React.ReactNode {
   const { count, inc } = useCounterStore();
 
   return (
-    <>
-      <Navbar />
-      <h1>About</h1>
-      <p>About page</p>
-      <p>{count}</p>
-      <button onClick={inc}>One Up</button>
-    </>
+    <PageWrapper>
+      <h1 className="text-4xl font-bold mb-4">About</h1>
+      <p className="text-lg mb-2">About page</p>
+      <p className="text-2xl mb-6">{count}</p>
+      <button
+        onClick={inc}
+        className="px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+      >
+        One Up
+      </button>
+    </PageWrapper>
   );
 }
 
