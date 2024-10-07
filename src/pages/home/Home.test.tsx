@@ -1,34 +1,36 @@
 import "@testing-library/jest-dom";
-import { act, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
-import renderWithRouter from "../../utils/test/renderWithRouter";
+import { screen } from "@testing-library/react";
+import usePostsQuery from "../../components/posts/usePostsQuery";
+import renderWithQueryClient from "../../utils/test/renderWithQueryClient";
 import Home from "./Home";
 
+jest.mock("../../components/posts/usePostsQuery");
+jest.mock("../../services/PlaceholderService/PlaceholderService");
+
 describe("Home Component", () => {
-  test("should render with initial state of 1", async () => {
-    renderHome();
+  beforeEach(() => {
+    jest.clearAllMocks();
 
-    expect(await screen.findByText(/^1$/)).toBeInTheDocument();
-    expect(
-      await screen.findByRole("button", { name: /one up/i })
-    ).toBeInTheDocument();
-  });
+    const mockPosts = [
+      { id: 1, title: "Post 1", body: "Body 1" },
+      { id: 2, title: "Post 2", body: "Body 2" },
+    ];
 
-  test("should increase count by clicking a button", async () => {
-    const user = userEvent.setup();
-
-    renderHome();
-
-    expect(await screen.findByText(/^1$/)).toBeInTheDocument();
-
-    await act(async () => {
-      await user.click(await screen.findByRole("button", { name: /one up/i }));
+    (usePostsQuery as jest.Mock).mockReturnValue({
+      isLoading: false,
+      isError: false,
+      data: mockPosts,
     });
-
-    expect(await screen.findByText(/^2$/)).toBeInTheDocument();
   });
-});
 
-const renderHome = () => {
-  return renderWithRouter(<Home />);
-};
+  test("should render the home page title and welcome message", async () => {
+    renderHome();
+
+    expect(screen.getByText("Home")).toBeInTheDocument();
+    expect(screen.getByText("Welcome to the Home page!")).toBeInTheDocument();
+  });
+
+  const renderHome = () => {
+    return renderWithQueryClient(<Home />);
+  };
+});
