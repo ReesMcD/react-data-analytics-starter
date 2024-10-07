@@ -1,15 +1,15 @@
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import "./App.css";
-import Home from "./components/home/Home";
-import About from "./components/about/About";
+import Charts from "./pages/charts/Charts";
+import Home from "./pages/home/Home";
 
 function App(): React.ReactNode {
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/charts" element={<Charts />} />
       </Routes>
     </>
   );

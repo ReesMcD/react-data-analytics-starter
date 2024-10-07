@@ -9,7 +9,7 @@ function Navbar(): React.ReactNode {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/charts">Charts</Link>
         </li>
       </ul>
     </nav>
