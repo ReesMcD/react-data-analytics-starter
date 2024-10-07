@@ -8,10 +8,12 @@ interface PageWrapperProps {
 
 const PageWrapper: React.FC<PageWrapperProps> = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-100">
-      <Navbar />
-      <main className="flex-grow container mx-auto px-4">{children}</main>
-      <footer className="bg-gray-800 text-white p-4 text-center"></footer>
+    <div>
+      <header>
+        <Navbar />
+      </header>
+      <main>{children}</main>
+      <footer></footer>
     </div>
   );
 };
