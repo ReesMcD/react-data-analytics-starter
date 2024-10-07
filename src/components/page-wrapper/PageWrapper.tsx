@@ -1,6 +1,5 @@
 // Start of Selection
 import React, { ReactNode } from "react";
-import Navbar from "../navbar/NavBar"; // Corrected import path
 
 interface PageWrapperProps {
   children: ReactNode;
@@ -8,12 +7,9 @@ interface PageWrapperProps {
 
 const PageWrapper: React.FC<PageWrapperProps> = ({ children }) => {
   return (
-    <div>
-      <header>
-        <Navbar />
-      </header>
-      <main>{children}</main>
-      <footer></footer>
+    <div className="flex flex-col items-center min-h-screen">
+      <main className="w-full max-w-4xl px-4 py-8">{children}</main>
+      <footer className="w-full max-w-4xl px-4 py-4"></footer>
     </div>
   );
 };
