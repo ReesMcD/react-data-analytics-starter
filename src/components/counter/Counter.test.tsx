@@ -1,10 +1,13 @@
 import "@testing-library/jest-dom";
-import { act, screen } from "@testing-library/react";
+import { act, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import renderWithQueryClient from "../../utils/test/renderWithQueryClient";
 import Counter from "./Counter";
 
 describe("Counter Component", () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   test("should render with initial state of 1", async () => {
     renderCounter();
 
@@ -29,8 +32,6 @@ describe("Counter Component", () => {
   });
 });
 
-// TODO: add tests for the posts when external data framework is implemented
-
 const renderCounter = () => {
-  return renderWithQueryClient(<Counter />);
+  return render(<Counter />);
 };

@@ -1,6 +1,7 @@
 import Post from "../../models/Post";
-import usePostsQuery from "./usePostsQuery";
-function Posts(): React.ReactNode {
+import usePostsQuery from "../../queries/posts/usePostsQuery";
+
+function Posts(): React.ReactElement {
   const { data: posts } = usePostsQuery();
 
   return (

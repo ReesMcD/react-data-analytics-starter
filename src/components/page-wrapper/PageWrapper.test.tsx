@@ -1,11 +1,10 @@
 import "@testing-library/jest-dom";
-import { screen } from "@testing-library/react";
-import renderWithRouter from "../../utils/test/renderWithRouter";
+import { render, screen } from "@testing-library/react";
 import PageWrapper from "./PageWrapper";
 
 describe("PageWrapper Component", () => {
   test("renders children correctly", () => {
-    renderWithRouter(
+    render(
       <PageWrapper>
         <div>Test Child</div>
       </PageWrapper>

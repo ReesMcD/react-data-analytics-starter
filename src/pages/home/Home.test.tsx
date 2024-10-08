@@ -1,11 +1,9 @@
 import "@testing-library/jest-dom";
-import { screen } from "@testing-library/react";
-import usePostsQuery from "../../components/posts/usePostsQuery";
-import renderWithQueryClient from "../../utils/test/renderWithQueryClient";
+import { render, screen } from "@testing-library/react";
+import usePostsQuery from "../../queries/posts/usePostsQuery";
 import Home from "./Home";
 
-jest.mock("../../components/posts/usePostsQuery");
-jest.mock("../../services/PlaceholderService/PlaceholderService");
+jest.mock("../../queries/posts/usePostsQuery");
 
 describe("Home Component", () => {
   beforeEach(() => {
@@ -28,9 +26,12 @@ describe("Home Component", () => {
 
     expect(screen.getByText("Home")).toBeInTheDocument();
     expect(screen.getByText("Welcome to the Home page!")).toBeInTheDocument();
+    expect(screen.getByText("Posts")).toBeInTheDocument();
+    expect(screen.getByText("Post 1")).toBeInTheDocument();
+    expect(screen.getByText("Post 2")).toBeInTheDocument();
   });
 
   const renderHome = () => {
-    return renderWithQueryClient(<Home />);
+    return render(<Home />);
   };
 });

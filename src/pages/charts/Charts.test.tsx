@@ -1,13 +1,16 @@
+import { QueryClient } from "@tanstack/react-query";
 import "@testing-library/jest-dom";
-import { screen } from "@testing-library/react";
-import renderWithQueryClient from "../../utils/test/renderWithQueryClient";
+import { render, screen } from "@testing-library/react";
 import Charts from "./Charts";
 
-jest.mock("../../components/posts/usePostsQuery");
+jest.mock("../../queries/posts/usePostsQuery");
+
+const queryClient = new QueryClient();
 
 describe("Charts Component", () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    queryClient.clear();
   });
 
   test("should render the Charts page title and welcome message", async () => {
@@ -18,6 +21,6 @@ describe("Charts Component", () => {
   });
 
   const renderCharts = () => {
-    return renderWithQueryClient(<Charts />);
+    return render(<Charts />);
   };
 });
