@@ -1,18 +1,18 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import useAllPostsQuery from "../../queries/all-posts/useAllPostsQuery";
+import useAllPostsQuery from "../../queries/useAllPostsQuery/useAllPostsQuery";
 import AllPosts from "./AllPosts";
 
-jest.mock("../../queries/all-posts/useAllPostsQuery");
+jest.mock("../../queries/useAllPostsQuery/useAllPostsQuery");
+
+const mockPosts = [
+  { id: 1, title: "Post 1", body: "Body 1" },
+  { id: 2, title: "Post 2", body: "Body 2" },
+];
 
 describe("All Posts Component", () => {
   beforeEach(() => {
     jest.clearAllMocks();
-
-    const mockPosts = [
-      { id: 1, title: "Post 1", body: "Body 1" },
-      { id: 2, title: "Post 2", body: "Body 2" },
-    ];
 
     (useAllPostsQuery as jest.Mock).mockReturnValue({
       isLoading: false,
@@ -23,18 +23,18 @@ describe("All Posts Component", () => {
 
   it("should render the Posts component", () => {
     renderPosts();
-
     expect(screen.getByTestId("all-posts-component")).toBeInTheDocument();
-    expect(screen.getByRole("cell", { name: "Post 1" })).toBeInTheDocument();
-    expect(screen.getByRole("cell", { name: "Post 2" })).toBeInTheDocument();
-    expect(useAllPostsQuery).toHaveBeenCalledTimes(1);
   });
 
   it("should render posts and call useAllPostsQuery", () => {
     renderPosts();
 
-    expect(screen.getByRole("cell", { name: "Post 1" })).toBeInTheDocument();
-    expect(screen.getByRole("cell", { name: "Post 2" })).toBeInTheDocument();
+    expect(
+      screen.getByRole("cell", { name: mockPosts[0].title })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("cell", { name: mockPosts[1].title })
+    ).toBeInTheDocument();
     expect(useAllPostsQuery).toHaveBeenCalledTimes(1);
   });
 

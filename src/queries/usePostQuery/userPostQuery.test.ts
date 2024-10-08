@@ -1,33 +1,28 @@
 import { QueryClient } from "@tanstack/react-query";
 import { renderHook, waitFor } from "@testing-library/react";
-import { getPosts } from "../../services/PlaceholderService/PlaceholderService";
+import { getPost } from "../../services/PlaceholderService/PlaceholderService";
 import queryClientProviderTestWrapper from "../../utils/test/queryClientProviderTestWrapper";
-import usePostQuery from "./useAllPostsQuery";
+import usePostQuery from "./usePostQuery";
 
 jest.mock("../../services/PlaceholderService/PlaceholderService");
 const queryClient = new QueryClient();
 
-describe("useAllPostsQuery", () => {
+describe("usePostQuery", () => {
   beforeEach(() => {
     jest.clearAllMocks();
     queryClient.clear();
   });
 
   it("should fetch posts correctly using usePostsQuery", async () => {
-    const mockPosts = [
-      { id: 1, title: "Post 1" },
-      { id: 2, title: "Post 2" },
-      { id: 3, title: "Post 3" },
-    ];
+    const mockPost = { id: 1, title: "Post 1" };
+    (getPost as jest.Mock).mockResolvedValue(mockPost);
 
-    (getPosts as jest.Mock).mockResolvedValue(mockPosts);
-
-    const { result } = renderHook(() => usePostQuery(), {
+    const { result } = renderHook(() => usePostQuery(1), {
       wrapper: queryClientProviderTestWrapper(queryClient),
     });
 
     await waitFor(() => expect(result.current.isLoading).toBe(false));
     expect(result.current.isError).toBe(false);
-    expect(result.current.data).toEqual(mockPosts);
+    expect(result.current.data).toEqual(mockPost);
   });
 });

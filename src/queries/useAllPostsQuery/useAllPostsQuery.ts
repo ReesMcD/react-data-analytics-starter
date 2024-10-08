@@ -1,12 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
-import { getPosts } from "../../services/PlaceholderService/PlaceholderService";
+import { getAllPosts } from "../../services/PlaceholderService/PlaceholderService";
 
-const key = ["posts"];
+const key = "posts";
 
 const useAllPostsQuery = () =>
   useQuery({
-    queryKey: key,
-    queryFn: getPosts,
+    queryKey: [key],
+    queryFn: getAllPosts,
     staleTime: Infinity,
   });
 
