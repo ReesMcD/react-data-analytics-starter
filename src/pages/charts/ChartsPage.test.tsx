@@ -4,6 +4,7 @@ import { render, screen } from "@testing-library/react";
 import ChartsPage from "./ChartsPage";
 
 jest.mock("../../queries/all-posts/useAllPostsQuery");
+jest.mock("recharts");
 
 const queryClient = new QueryClient();
 
@@ -16,7 +17,7 @@ describe("Charts Page Component", () => {
   it("should render the Charts page", async () => {
     renderCharts();
 
-    expect(screen.getByTestId("charts-page-content")).toBeInTheDocument();
+    expect(screen.getByTestId("charts-page")).toBeInTheDocument();
   });
 
   const renderCharts = () => {
