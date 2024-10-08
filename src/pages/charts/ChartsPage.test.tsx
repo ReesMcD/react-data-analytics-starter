@@ -1,13 +1,13 @@
 import { QueryClient } from "@tanstack/react-query";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import Charts from "./Charts";
+import ChartsPage from "./ChartsPage";
 
 jest.mock("../../queries/posts/usePostsQuery");
 
 const queryClient = new QueryClient();
 
-describe("Charts Component", () => {
+describe("Charts Page Component", () => {
   beforeEach(() => {
     jest.clearAllMocks();
     queryClient.clear();
@@ -17,10 +17,9 @@ describe("Charts Component", () => {
     renderCharts();
 
     expect(screen.getByText("Charts")).toBeInTheDocument();
-    expect(screen.getByText("Charts page")).toBeInTheDocument();
   });
 
   const renderCharts = () => {
-    return render(<Charts />);
+    return render(<ChartsPage />);
   };
 });

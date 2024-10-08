@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import usePostsQuery from "../../queries/posts/usePostsQuery";
-import Posts from "./Posts";
+import AllPosts from "./AllPosts";
 
 jest.mock("../../queries/posts/usePostsQuery");
 
@@ -30,6 +30,6 @@ describe("Posts Component", () => {
   });
 
   const renderPosts = () => {
-    return render(<Posts />);
+    return render(<AllPosts />);
   };
 });

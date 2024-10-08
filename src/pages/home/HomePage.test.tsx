@@ -1,11 +1,11 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import usePostsQuery from "../../queries/posts/usePostsQuery";
-import Home from "./Home";
+import HomePage from "./HomePage";
 
 jest.mock("../../queries/posts/usePostsQuery");
 
-describe("Home Component", () => {
+describe("HomePage Component", () => {
   beforeEach(() => {
     jest.clearAllMocks();
 
@@ -25,13 +25,12 @@ describe("Home Component", () => {
     renderHome();
 
     expect(screen.getByText("Home")).toBeInTheDocument();
-    expect(screen.getByText("Welcome to the Home page!")).toBeInTheDocument();
-    expect(screen.getByText("Posts")).toBeInTheDocument();
+    expect(screen.getByText("All Posts")).toBeInTheDocument();
     expect(screen.getByText("Post 1")).toBeInTheDocument();
     expect(screen.getByText("Post 2")).toBeInTheDocument();
   });
 
   const renderHome = () => {
-    return render(<Home />);
+    return render(<HomePage />);
   };
 });

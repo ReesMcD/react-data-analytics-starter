@@ -7,9 +7,11 @@ interface PageWrapperProps {
 
 const PageWrapper: React.FC<PageWrapperProps> = ({ children }) => {
   return (
-    <div className="flex flex-col items-center min-h-screen">
-      <main className="w-full max-w-4xl px-4 py-8">{children}</main>
-      <footer className="w-full max-w-4xl px-4 py-4"></footer>
+    <div className="min-h-screen flex flex-col">
+      <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl mt-16 mb-8 flex justify-center">
+        <div className="w-full">{children}</div>
+      </main>
+      <footer className="mt-auto">{/* Footer content */}</footer>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import Post from "../../models/Post";
+import Post from "../../types/Post";
 import { get } from "../../utils/client/get";
 import { getPosts } from "./PlaceholderService";
 
