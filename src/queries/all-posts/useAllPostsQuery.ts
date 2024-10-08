@@ -3,11 +3,11 @@ import { getPosts } from "../../services/PlaceholderService/PlaceholderService";
 
 const key = ["posts"];
 
-const usePostsQuery = () =>
+const useAllPostsQuery = () =>
   useQuery({
     queryKey: key,
     queryFn: getPosts,
     staleTime: Infinity,
   });
 
-export default usePostsQuery;
+export default useAllPostsQuery;

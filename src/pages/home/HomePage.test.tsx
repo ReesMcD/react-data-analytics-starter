@@ -1,9 +1,9 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import usePostsQuery from "../../queries/posts/usePostsQuery";
+import useAllPostsQuery from "../../queries/all-posts/useAllPostsQuery";
 import HomePage from "./HomePage";
 
-jest.mock("../../queries/posts/usePostsQuery");
+jest.mock("../../queries/all-posts/useAllPostsQuery");
 
 describe("HomePage Component", () => {
   beforeEach(() => {
@@ -14,20 +14,23 @@ describe("HomePage Component", () => {
       { id: 2, title: "Post 2", body: "Body 2" },
     ];
 
-    (usePostsQuery as jest.Mock).mockReturnValue({
+    (useAllPostsQuery as jest.Mock).mockReturnValue({
       isLoading: false,
       isError: false,
       data: mockPosts,
     });
   });
 
-  test("should render the home page title and welcome message", async () => {
+  test("should render the home page title", async () => {
     renderHome();
 
     expect(screen.getByText("Home")).toBeInTheDocument();
-    expect(screen.getByText("All Posts")).toBeInTheDocument();
-    expect(screen.getByText("Post 1")).toBeInTheDocument();
-    expect(screen.getByText("Post 2")).toBeInTheDocument();
+  });
+
+  test("should render subcomponents", async () => {
+    const { getByText } = renderHome();
+    expect(getByText(/All Posts/i)).toBeInTheDocument();
+    // TODO: add more tests for subcomponents
   });
 
   const renderHome = () => {

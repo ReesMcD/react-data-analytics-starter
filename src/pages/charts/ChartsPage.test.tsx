@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import ChartsPage from "./ChartsPage";
 
-jest.mock("../../queries/posts/usePostsQuery");
+jest.mock("../../queries/all-posts/useAllPostsQuery");
 
 const queryClient = new QueryClient();
 

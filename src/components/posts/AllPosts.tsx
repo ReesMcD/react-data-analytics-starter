@@ -5,7 +5,7 @@ function AllPosts(): React.ReactElement {
 
   return (
     <>
-      <h2 className="text-2xl font-bold mb-4">All Posts</h2>
+      <h2>All Posts</h2>
       <table className="w-full border-collapse">
         <thead>
           <tr className="bg-gray-200">

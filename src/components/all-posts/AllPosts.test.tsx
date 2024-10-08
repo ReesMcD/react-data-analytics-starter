@@ -1,9 +1,9 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import usePostsQuery from "../../queries/posts/usePostsQuery";
+import useAllPostsQuery from "../../queries/all-posts/useAllPostsQuery";
 import AllPosts from "./AllPosts";
 
-jest.mock("../../queries/posts/usePostsQuery");
+jest.mock("../../queries/all-posts/useAllPostsQuery");
 
 describe("Posts Component", () => {
   beforeEach(() => {
@@ -14,7 +14,7 @@ describe("Posts Component", () => {
       { id: 2, title: "Post 2", body: "Body 2" },
     ];
 
-    (usePostsQuery as jest.Mock).mockReturnValue({
+    (useAllPostsQuery as jest.Mock).mockReturnValue({
       isLoading: false,
       isError: false,
       data: mockPosts,
@@ -24,9 +24,9 @@ describe("Posts Component", () => {
   test("should render the Posts component", () => {
     renderPosts();
 
-    expect(screen.getByText("Posts")).toBeInTheDocument();
-    expect(screen.getByText("Post 1")).toBeInTheDocument();
-    expect(screen.getByText("Post 2")).toBeInTheDocument();
+    expect(screen.getByText("All Posts")).toBeInTheDocument();
+    expect(screen.getByRole("cell", { name: "Post 1" })).toBeInTheDocument();
+    expect(screen.getByRole("cell", { name: "Post 2" })).toBeInTheDocument();
   });
 
   const renderPosts = () => {
