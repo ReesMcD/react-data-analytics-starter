@@ -6,7 +6,10 @@ import SinglePost from "../../components/single-post/SinglePost";
 function HomePage(): React.ReactNode {
   return (
     <PageWrapper>
-      <div className="flex justify-between items-center">
+      <div
+        className="flex justify-between items-center"
+        data-testid="home-page-header"
+      >
         <div>
           <h1>Home</h1>
         </div>

@@ -7,7 +7,7 @@ interface PageWrapperProps {
 
 const PageWrapper: React.FC<PageWrapperProps> = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col" data-testid="page-wrapper">
       <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl mt-16 mb-8 flex justify-center">
         <div className="w-full">{children}</div>
       </main>

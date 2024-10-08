@@ -21,13 +21,13 @@ describe("HomePage Component", () => {
     });
   });
 
-  test("should render the home page title", async () => {
+  it("should render the home page", async () => {
     renderHome();
 
-    expect(screen.getByText("Home")).toBeInTheDocument();
+    expect(screen.getByTestId("home-page-header")).toBeInTheDocument();
   });
 
-  test("should render subcomponents", async () => {
+  it("should render subcomponents", async () => {
     const { getByText } = renderHome();
     expect(getByText(/All Posts/i)).toBeInTheDocument();
     // TODO: add more tests for subcomponents

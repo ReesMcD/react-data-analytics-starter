@@ -8,16 +8,23 @@ describe("Counter Component", () => {
     jest.clearAllMocks();
   });
 
-  test("should render with initial state of 1", async () => {
+  it("should render Counter component", () => {
     renderCounter();
 
+    expect(screen.getByTestId("counter-component")).toBeInTheDocument();
+  });
+
+  it("should render with initial state of 1", async () => {
+    renderCounter();
+
+    // expect(mockUseCounterStore).toHaveBeenCalled();
     expect(await screen.findByText(/^1$/)).toBeInTheDocument();
     expect(
       await screen.findByRole("button", { name: /one up/i })
     ).toBeInTheDocument();
   });
 
-  test("should increase count by clicking a button", async () => {
+  it("should increase count by clicking a button", async () => {
     const user = userEvent.setup();
 
     renderCounter();

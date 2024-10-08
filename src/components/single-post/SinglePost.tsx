@@ -10,7 +10,7 @@ function SinglePost({ id }: SinglePostProps): React.ReactElement {
   const post = { title: `Post ${id}`, body: `This is the body of post ${id}` };
 
   return (
-    <div className="single-post">
+    <div data-testid="single-post">
       <h2 className="text-2xl font-bold mb-4">{post.title}</h2>
       <p className="text-gray-700">{post.body}</p>
     </div>

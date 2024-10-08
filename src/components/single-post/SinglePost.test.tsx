@@ -12,6 +12,7 @@ describe("SinglePost Component", () => {
   test("renders post title and body", () => {
     render(<SinglePost id={mockPost.id} />);
 
+    expect(screen.getByTestId("single-post")).toBeInTheDocument();
     expect(screen.getByText(mockPost.title)).toBeInTheDocument();
     expect(screen.getByText(mockPost.body)).toBeInTheDocument();
   });

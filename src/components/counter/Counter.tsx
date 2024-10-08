@@ -4,7 +4,10 @@ function Counter(): React.ReactElement {
   const { count, inc } = useCounterStore();
 
   return (
-    <div className="flex flex-col items-center space-y-2">
+    <div
+      className="flex flex-col items-center space-y-2"
+      data-testid="counter-component"
+    >
       <h2 className="text-xl font-bold">Post Count</h2>
       <p className="text-lg">Click to iterate through posts</p>
       <p className="text-2xl">{count}</p>

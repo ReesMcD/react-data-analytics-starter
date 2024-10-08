@@ -13,7 +13,7 @@ describe("useAllPostsQuery", () => {
     queryClient.clear();
   });
 
-  it("fetches posts correctly using usePostsQuery", async () => {
+  it("should fetch posts correctly using usePostsQuery", async () => {
     const mockPosts = [
       { id: 1, title: "Post 1" },
       { id: 2, title: "Post 2" },

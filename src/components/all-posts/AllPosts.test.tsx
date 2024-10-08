@@ -5,7 +5,7 @@ import AllPosts from "./AllPosts";
 
 jest.mock("../../queries/all-posts/useAllPostsQuery");
 
-describe("Posts Component", () => {
+describe("All Posts Component", () => {
   beforeEach(() => {
     jest.clearAllMocks();
 
@@ -21,12 +21,21 @@ describe("Posts Component", () => {
     });
   });
 
-  test("should render the Posts component", () => {
+  it("should render the Posts component", () => {
     renderPosts();
 
-    expect(screen.getByText("All Posts")).toBeInTheDocument();
+    expect(screen.getByTestId("all-posts-component")).toBeInTheDocument();
     expect(screen.getByRole("cell", { name: "Post 1" })).toBeInTheDocument();
     expect(screen.getByRole("cell", { name: "Post 2" })).toBeInTheDocument();
+    expect(useAllPostsQuery).toHaveBeenCalledTimes(1);
+  });
+
+  it("should render posts and call useAllPostsQuery", () => {
+    renderPosts();
+
+    expect(screen.getByRole("cell", { name: "Post 1" })).toBeInTheDocument();
+    expect(screen.getByRole("cell", { name: "Post 2" })).toBeInTheDocument();
+    expect(useAllPostsQuery).toHaveBeenCalledTimes(1);
   });
 
   const renderPosts = () => {

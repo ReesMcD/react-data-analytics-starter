@@ -13,10 +13,10 @@ describe("Charts Page Component", () => {
     queryClient.clear();
   });
 
-  test("should render the Charts page title and welcome message", async () => {
+  it("should render the Charts page", async () => {
     renderCharts();
 
-    expect(screen.getByText("Charts")).toBeInTheDocument();
+    expect(screen.getByTestId("charts-page-content")).toBeInTheDocument();
   });
 
   const renderCharts = () => {

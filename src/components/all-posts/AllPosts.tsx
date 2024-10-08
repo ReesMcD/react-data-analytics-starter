@@ -4,7 +4,7 @@ function AllPosts(): React.ReactElement {
   const { data: posts } = useAllPostsQuery();
 
   return (
-    <>
+    <div data-testid="all-posts-component">
       <h2 className="text-2xl font-bold mb-4">All Posts</h2>
       <table className="w-full border-collapse">
         <thead>
@@ -22,7 +22,7 @@ function AllPosts(): React.ReactElement {
           ))}
         </tbody>
       </table>
-    </>
+    </div>
   );
 }
 
