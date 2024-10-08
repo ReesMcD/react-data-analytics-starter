@@ -2,8 +2,11 @@ import AllPosts from "../../components/all-posts/AllPosts";
 import Counter from "../../components/counter/Counter";
 import PageWrapper from "../../components/page-wrapper/PageWrapper";
 import SinglePost from "../../components/single-post/SinglePost";
+import useCounterStore from "../../stores/counter/useCounterStore";
 
 function HomePage(): React.ReactNode {
+  const { count } = useCounterStore();
+
   return (
     <PageWrapper>
       <div
@@ -22,7 +25,7 @@ function HomePage(): React.ReactNode {
           <AllPosts />
         </div>
         <div className="w-full md:w-1/2 pl-0 md:pl-4">
-          <SinglePost id={1} />
+          <SinglePost id={count} />
         </div>
       </div>
     </PageWrapper>

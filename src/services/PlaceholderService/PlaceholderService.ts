@@ -14,11 +14,11 @@ export async function getAllPosts(): Promise<Post[]> {
 }
 
 export async function getPost(id: number): Promise<Post> {
-  console.log("Fetching all posts");
+  console.log(`Fetching post ${id}`);
   try {
     return await get<Post>(`${PLACEHOLDER_API_URL}/posts/${id}`);
   } catch (error) {
-    console.error("Error in PlaceholderService getPost:", error);
+    console.error(`Error in PlaceholderService getPost ${id}:`, error);
     throw error;
   }
 }
