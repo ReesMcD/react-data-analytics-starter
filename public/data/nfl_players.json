@@ -1,0 +1,502 @@
+[
+  {
+    "id": "TB12",
+    "name": "Tom Brady",
+    "team_id": "TB",
+    "number": 12,
+    "position": "QB",
+    "college": "Michigan",
+    "stats": {
+      "passing_yards": 4694,
+      "touchdowns": 25,
+      "interceptions": 9
+    },
+    "skills": {
+      "speed": 65,
+      "power": 75,
+      "quickness": 70,
+      "poise": 98,
+      "brain": 99
+    }
+  },
+  {
+    "id": "PM15",
+    "name": "Patrick Mahomes",
+    "team_id": "KC",
+    "number": 15,
+    "position": "QB",
+    "college": "Texas Tech",
+    "stats": {
+      "passing_yards": 5250,
+      "touchdowns": 41,
+      "interceptions": 12
+    },
+    "skills": {
+      "speed": 85,
+      "power": 90,
+      "quickness": 95,
+      "poise": 92,
+      "brain": 95
+    }
+  },
+  {
+    "id": "AR12",
+    "name": "Aaron Rodgers",
+    "team_id": "NYJ",
+    "number": 12,
+    "position": "QB",
+    "college": "California",
+    "stats": {
+      "passing_yards": 3695,
+      "touchdowns": 26,
+      "interceptions": 12
+    },
+    "skills": {
+      "speed": 75,
+      "power": 85,
+      "quickness": 80,
+      "poise": 95,
+      "brain": 97
+    }
+  },
+  {
+    "id": "DH22",
+    "name": "Derrick Henry",
+    "team_id": "TEN",
+    "number": 22,
+    "position": "RB",
+    "college": "Alabama",
+    "stats": {
+      "rushing_yards": 1538,
+      "touchdowns": 13,
+      "receptions": 33
+    },
+    "skills": {
+      "speed": 90,
+      "power": 98,
+      "quickness": 85,
+      "poise": 88,
+      "brain": 85
+    }
+  },
+  {
+    "id": "DK14",
+    "name": "Stefon Diggs",
+    "team_id": "BUF",
+    "number": 14,
+    "position": "WR",
+    "college": "Maryland",
+    "stats": {
+      "receptions": 108,
+      "receiving_yards": 1429,
+      "touchdowns": 11
+    },
+    "skills": {
+      "speed": 92,
+      "power": 80,
+      "quickness": 95,
+      "poise": 88,
+      "brain": 90
+    }
+  },
+  {
+    "id": "TK87",
+    "name": "Travis Kelce",
+    "team_id": "KC",
+    "number": 87,
+    "position": "TE",
+    "college": "Cincinnati",
+    "stats": {
+      "receptions": 110,
+      "receiving_yards": 1338,
+      "touchdowns": 12
+    },
+    "skills": {
+      "speed": 85,
+      "power": 88,
+      "quickness": 90,
+      "poise": 92,
+      "brain": 95
+    }
+  },
+  {
+    "id": "AD99",
+    "name": "Aaron Donald",
+    "team_id": "LAR",
+    "number": 99,
+    "position": "DT",
+    "college": "Pittsburgh",
+    "stats": {
+      "sacks": 5,
+      "tackles": 49,
+      "forced_fumbles": 1
+    },
+    "skills": {
+      "speed": 85,
+      "power": 99,
+      "quickness": 95,
+      "poise": 90,
+      "brain": 92
+    }
+  },
+  {
+    "id": "JR20",
+    "name": "Jalen Ramsey",
+    "team_id": "MIA",
+    "number": 20,
+    "position": "CB",
+    "college": "Florida State",
+    "stats": {
+      "interceptions": 4,
+      "tackles": 88,
+      "passes_defended": 18
+    },
+    "skills": {
+      "speed": 95,
+      "power": 85,
+      "quickness": 98,
+      "poise": 90,
+      "brain": 92
+    }
+  },
+  {
+    "id": "JA17",
+    "name": "Josh Allen",
+    "team_id": "BUF",
+    "number": 17,
+    "position": "QB",
+    "college": "Wyoming",
+    "stats": {
+      "passing_yards": 4283,
+      "touchdowns": 35,
+      "interceptions": 14
+    },
+    "skills": {
+      "speed": 88,
+      "power": 92,
+      "quickness": 90,
+      "poise": 85,
+      "brain": 90
+    }
+  },
+  {
+    "id": "CMC22",
+    "name": "Christian McCaffrey",
+    "team_id": "SF",
+    "number": 22,
+    "position": "RB",
+    "college": "Stanford",
+    "stats": {
+      "rushing_yards": 1139,
+      "receiving_yards": 741,
+      "total_touchdowns": 13
+    },
+    "skills": {
+      "speed": 95,
+      "power": 85,
+      "quickness": 98,
+      "poise": 90,
+      "brain": 92
+    }
+  },
+  {
+    "id": "DW4",
+    "name": "Deshaun Watson",
+    "team_id": "CLE",
+    "number": 4,
+    "position": "QB",
+    "college": "Clemson",
+    "stats": {
+      "passing_yards": 1102,
+      "touchdowns": 7,
+      "interceptions": 5
+    },
+    "skills": {
+      "speed": 85,
+      "power": 88,
+      "quickness": 90,
+      "poise": 85,
+      "brain": 88
+    }
+  },
+  {
+    "id": "JC18",
+    "name": "Justin Jefferson",
+    "team_id": "MIN",
+    "number": 18,
+    "position": "WR",
+    "college": "LSU",
+    "stats": {
+      "receptions": 128,
+      "receiving_yards": 1809,
+      "touchdowns": 8
+    },
+    "skills": {
+      "speed": 92,
+      "power": 85,
+      "quickness": 95,
+      "poise": 88,
+      "brain": 90
+    }
+  },
+  {
+    "id": "NK97",
+    "name": "Nick Bosa",
+    "team_id": "SF",
+    "number": 97,
+    "position": "DE",
+    "college": "Ohio State",
+    "stats": {
+      "sacks": 18.5,
+      "tackles": 51,
+      "forced_fumbles": 2
+    },
+    "skills": {
+      "speed": 88,
+      "power": 95,
+      "quickness": 92,
+      "poise": 85,
+      "brain": 90
+    }
+  },
+  {
+    "id": "DM32",
+    "name": "Dalvin Cook",
+    "team_id": "MIN",
+    "number": 32,
+    "position": "RB",
+    "college": "Florida State",
+    "stats": {
+      "rushing_yards": 1173,
+      "touchdowns": 10,
+      "receptions": 39
+    },
+    "skills": {
+      "speed": 93,
+      "power": 88,
+      "quickness": 95,
+      "poise": 85,
+      "brain": 88
+    }
+  },
+  {
+    "id": "MG88",
+    "name": "Mark Giangreco",
+    "team_id": "NYG",
+    "number": 88,
+    "position": "TE",
+    "college": "Iowa",
+    "stats": {
+      "receptions": 58,
+      "receiving_yards": 672,
+      "touchdowns": 7
+    },
+    "skills": {
+      "speed": 80,
+      "power": 85,
+      "quickness": 82,
+      "poise": 85,
+      "brain": 88
+    }
+  },
+  {
+    "id": "JB9",
+    "name": "Joe Burrow",
+    "team_id": "CIN",
+    "number": 9,
+    "position": "QB",
+    "college": "LSU",
+    "stats": {
+      "passing_yards": 4475,
+      "touchdowns": 35,
+      "interceptions": 12
+    },
+    "skills": {
+      "speed": 80,
+      "power": 88,
+      "quickness": 85,
+      "poise": 92,
+      "brain": 95
+    }
+  },
+  {
+    "id": "TH10",
+    "name": "Tyreek Hill",
+    "team_id": "MIA",
+    "number": 10,
+    "position": "WR",
+    "college": "West Alabama",
+    "stats": {
+      "receptions": 119,
+      "receiving_yards": 1710,
+      "touchdowns": 7
+    },
+    "skills": {
+      "speed": 99,
+      "power": 80,
+      "quickness": 98,
+      "poise": 85,
+      "brain": 88
+    }
+  },
+  {
+    "id": "MG15",
+    "name": "Minkah Fitzpatrick",
+    "team_id": "PIT",
+    "number": 39,
+    "position": "S",
+    "college": "Alabama",
+    "stats": {
+      "interceptions": 6,
+      "tackles": 96,
+      "forced_fumbles": 1
+    },
+    "skills": {
+      "speed": 90,
+      "power": 85,
+      "quickness": 92,
+      "poise": 88,
+      "brain": 95
+    }
+  },
+  {
+    "id": "DM97",
+    "name": "DeForest Buckner",
+    "team_id": "IND",
+    "number": 99,
+    "position": "DT",
+    "college": "Oregon",
+    "stats": {
+      "sacks": 8,
+      "tackles": 74,
+      "forced_fumbles": 2
+    },
+    "skills": {
+      "speed": 82,
+      "power": 95,
+      "quickness": 85,
+      "poise": 88,
+      "brain": 90
+    }
+  },
+  {
+    "id": "JH10",
+    "name": "DeAndre Hopkins",
+    "team_id": "ARI",
+    "number": 10,
+    "position": "WR",
+    "college": "Clemson",
+    "stats": {
+      "receptions": 64,
+      "receiving_yards": 717,
+      "touchdowns": 3
+    },
+    "skills": {
+      "speed": 88,
+      "power": 85,
+      "quickness": 92,
+      "poise": 90,
+      "brain": 95
+    }
+  },
+  {
+    "id": "RW3",
+    "name": "Russell Wilson",
+    "team_id": "DEN",
+    "number": 3,
+    "position": "QB",
+    "college": "Wisconsin",
+    "stats": {
+      "passing_yards": 3524,
+      "touchdowns": 16,
+      "interceptions": 11
+    },
+    "skills": {
+      "speed": 85,
+      "power": 88,
+      "quickness": 90,
+      "poise": 92,
+      "brain": 95
+    }
+  },
+  {
+    "id": "AK41",
+    "name": "Alvin Kamara",
+    "team_id": "NO",
+    "number": 41,
+    "position": "RB",
+    "college": "Tennessee",
+    "stats": {
+      "rushing_yards": 897,
+      "receiving_yards": 490,
+      "total_touchdowns": 4
+    },
+    "skills": {
+      "speed": 92,
+      "power": 85,
+      "quickness": 95,
+      "poise": 88,
+      "brain": 90
+    }
+  },
+  {
+    "id": "JW11",
+    "name": "Jaylen Waddle",
+    "team_id": "MIA",
+    "number": 17,
+    "position": "WR",
+    "college": "Alabama",
+    "stats": {
+      "receptions": 75,
+      "receiving_yards": 1356,
+      "touchdowns": 8
+    },
+    "skills": {
+      "speed": 95,
+      "power": 80,
+      "quickness": 95,
+      "poise": 85,
+      "brain": 88
+    }
+  },
+  {
+    "id": "MW13",
+    "name": "Mike Williams",
+    "team_id": "LAC",
+    "number": 81,
+    "position": "WR",
+    "college": "Clemson",
+    "stats": {
+      "receptions": 63,
+      "receiving_yards": 895,
+      "touchdowns": 4
+    },
+    "skills": {
+      "speed": 88,
+      "power": 90,
+      "quickness": 85,
+      "poise": 85,
+      "brain": 88
+    }
+  },
+  {
+    "id": "JT28",
+    "name": "Jonathan Taylor",
+    "team_id": "IND",
+    "number": 28,
+    "position": "RB",
+    "college": "Wisconsin",
+    "stats": {
+      "rushing_yards": 861,
+      "touchdowns": 4,
+      "receptions": 28
+    },
+    "skills": {
+      "speed": 95,
+      "power": 92,
+      "quickness": 90,
+      "poise": 85,
+      "brain": 88
+    }
+  }
+]

@@ -1,0 +1,322 @@
+[
+  {
+    "id": "ARI",
+    "name": "Cardinals",
+    "fullName": "Arizona Cardinals",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "stadium": "State Farm Stadium",
+    "conference": "NFC",
+    "division": "West"
+  },
+  {
+    "id": "ATL",
+    "name": "Falcons",
+    "fullName": "Atlanta Falcons",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "stadium": "Mercedes-Benz Stadium",
+    "conference": "NFC",
+    "division": "South"
+  },
+  {
+    "id": "BAL",
+    "name": "Ravens",
+    "fullName": "Baltimore Ravens",
+    "city": "Baltimore",
+    "state": "Maryland",
+    "stadium": "M&T Bank Stadium",
+    "conference": "AFC",
+    "division": "North"
+  },
+  {
+    "id": "BUF",
+    "name": "Bills",
+    "fullName": "Buffalo Bills",
+    "city": "Orchard Park",
+    "state": "New York",
+    "stadium": "Highmark Stadium",
+    "conference": "AFC",
+    "division": "East"
+  },
+  {
+    "id": "CAR",
+    "name": "Panthers",
+    "fullName": "Carolina Panthers",
+    "city": "Charlotte",
+    "state": "North Carolina",
+    "stadium": "Bank of America Stadium",
+    "conference": "NFC",
+    "division": "South"
+  },
+  {
+    "id": "CHI",
+    "name": "Bears",
+    "fullName": "Chicago Bears",
+    "city": "Chicago",
+    "state": "Illinois",
+    "stadium": "Soldier Field",
+    "conference": "NFC",
+    "division": "North"
+  },
+  {
+    "id": "CIN",
+    "name": "Bengals",
+    "fullName": "Cincinnati Bengals",
+    "city": "Cincinnati",
+    "state": "Ohio",
+    "stadium": "Paycor Stadium",
+    "conference": "AFC",
+    "division": "North"
+  },
+  {
+    "id": "CLE",
+    "name": "Browns",
+    "fullName": "Cleveland Browns",
+    "city": "Cleveland",
+    "state": "Ohio",
+    "stadium": "FirstEnergy Stadium",
+    "conference": "AFC",
+    "division": "North"
+  },
+  {
+    "id": "DAL",
+    "name": "Cowboys",
+    "fullName": "Dallas Cowboys",
+    "city": "Arlington",
+    "state": "Texas",
+    "stadium": "AT&T Stadium",
+    "conference": "NFC",
+    "division": "East"
+  },
+  {
+    "id": "DEN",
+    "name": "Broncos",
+    "fullName": "Denver Broncos",
+    "city": "Denver",
+    "state": "Colorado",
+    "stadium": "Empower Field at Mile High",
+    "conference": "AFC",
+    "division": "West"
+  },
+  {
+    "id": "DET",
+    "name": "Lions",
+    "fullName": "Detroit Lions",
+    "city": "Detroit",
+    "state": "Michigan",
+    "stadium": "Ford Field",
+    "conference": "NFC",
+    "division": "North"
+  },
+  {
+    "id": "GB",
+    "name": "Packers",
+    "fullName": "Green Bay Packers",
+    "city": "Green Bay",
+    "state": "Wisconsin",
+    "stadium": "Lambeau Field",
+    "conference": "NFC",
+    "division": "North"
+  },
+  {
+    "id": "HOU",
+    "name": "Texans",
+    "fullName": "Houston Texans",
+    "city": "Houston",
+    "state": "Texas",
+    "stadium": "NRG Stadium",
+    "conference": "AFC",
+    "division": "South"
+  },
+  {
+    "id": "IND",
+    "name": "Colts",
+    "fullName": "Indianapolis Colts",
+    "city": "Indianapolis",
+    "state": "Indiana",
+    "stadium": "Lucas Oil Stadium",
+    "conference": "AFC",
+    "division": "South"
+  },
+  {
+    "id": "JAX",
+    "name": "Jaguars",
+    "fullName": "Jacksonville Jaguars",
+    "city": "Jacksonville",
+    "state": "Florida",
+    "stadium": "TIAA Bank Field",
+    "conference": "AFC",
+    "division": "South"
+  },
+  {
+    "id": "KC",
+    "name": "Chiefs",
+    "fullName": "Kansas City Chiefs",
+    "city": "Kansas City",
+    "state": "Missouri",
+    "stadium": "GEHA Field at Arrowhead Stadium",
+    "conference": "AFC",
+    "division": "West"
+  },
+  {
+    "id": "LV",
+    "name": "Raiders",
+    "fullName": "Las Vegas Raiders",
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "stadium": "Allegiant Stadium",
+    "conference": "AFC",
+    "division": "West"
+  },
+  {
+    "id": "LAC",
+    "name": "Chargers",
+    "fullName": "Los Angeles Chargers",
+    "city": "Inglewood",
+    "state": "California",
+    "stadium": "SoFi Stadium",
+    "conference": "AFC",
+    "division": "West"
+  },
+  {
+    "id": "LAR",
+    "name": "Rams",
+    "fullName": "Los Angeles Rams",
+    "city": "Inglewood",
+    "state": "California",
+    "stadium": "SoFi Stadium",
+    "conference": "NFC",
+    "division": "West"
+  },
+  {
+    "id": "MIA",
+    "name": "Dolphins",
+    "fullName": "Miami Dolphins",
+    "city": "Miami Gardens",
+    "state": "Florida",
+    "stadium": "Hard Rock Stadium",
+    "conference": "AFC",
+    "division": "East"
+  },
+  {
+    "id": "MIN",
+    "name": "Vikings",
+    "fullName": "Minnesota Vikings",
+    "city": "Minneapolis",
+    "state": "Minnesota",
+    "stadium": "U.S. Bank Stadium",
+    "conference": "NFC",
+    "division": "North"
+  },
+  {
+    "id": "NE",
+    "name": "Patriots",
+    "fullName": "New England Patriots",
+    "city": "Foxborough",
+    "state": "Massachusetts",
+    "stadium": "Gillette Stadium",
+    "conference": "AFC",
+    "division": "East"
+  },
+  {
+    "id": "NO",
+    "name": "Saints",
+    "fullName": "New Orleans Saints",
+    "city": "New Orleans",
+    "state": "Louisiana",
+    "stadium": "Caesars Superdome",
+    "conference": "NFC",
+    "division": "South"
+  },
+  {
+    "id": "NYG",
+    "name": "Giants",
+    "fullName": "New York Giants",
+    "city": "East Rutherford",
+    "state": "New Jersey",
+    "stadium": "MetLife Stadium",
+    "conference": "NFC",
+    "division": "East"
+  },
+  {
+    "id": "NYJ",
+    "name": "Jets",
+    "fullName": "New York Jets",
+    "city": "East Rutherford",
+    "state": "New Jersey",
+    "stadium": "MetLife Stadium",
+    "conference": "AFC",
+    "division": "East"
+  },
+  {
+    "id": "PHI",
+    "name": "Eagles",
+    "fullName": "Philadelphia Eagles",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "stadium": "Lincoln Financial Field",
+    "conference": "NFC",
+    "division": "East"
+  },
+  {
+    "id": "PIT",
+    "name": "Steelers",
+    "fullName": "Pittsburgh Steelers",
+    "city": "Pittsburgh",
+    "state": "Pennsylvania",
+    "stadium": "Acrisure Stadium",
+    "conference": "AFC",
+    "division": "North"
+  },
+  {
+    "id": "SF",
+    "name": "49ers",
+    "fullName": "San Francisco 49ers",
+    "city": "Santa Clara",
+    "state": "California",
+    "stadium": "Levi's Stadium",
+    "conference": "NFC",
+    "division": "West"
+  },
+  {
+    "id": "SEA",
+    "name": "Seahawks",
+    "fullName": "Seattle Seahawks",
+    "city": "Seattle",
+    "state": "Washington",
+    "stadium": "Lumen Field",
+    "conference": "NFC",
+    "division": "West"
+  },
+  {
+    "id": "TB",
+    "name": "Buccaneers",
+    "fullName": "Tampa Bay Buccaneers",
+    "city": "Tampa",
+    "state": "Florida",
+    "stadium": "Raymond James Stadium",
+    "conference": "NFC",
+    "division": "South"
+  },
+  {
+    "id": "TEN",
+    "name": "Titans",
+    "fullName": "Tennessee Titans",
+    "city": "Nashville",
+    "state": "Tennessee",
+    "stadium": "Nissan Stadium",
+    "conference": "AFC",
+    "division": "South"
+  },
+  {
+    "id": "WAS",
+    "name": "Commanders",
+    "fullName": "Washington Commanders",
+    "city": "Landover",
+    "state": "Maryland",
+    "stadium": "FedExField",
+    "conference": "NFC",
+    "division": "East"
+  }
+]

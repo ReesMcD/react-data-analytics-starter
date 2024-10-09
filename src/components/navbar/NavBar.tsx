@@ -1,30 +1,43 @@
+import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { Link, Outlet } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
+import { useAllTeamsQuery } from "../../queries/useAllTeamsQuery/useAllTeamsQuery";
 
 function Navbar() {
+  const { data: teams } = useAllTeamsQuery();
+  console.log(teams);
   return (
     <>
-      <nav className="w-full bg-gray-800 fixed top-0 left-0 right-0 z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center h-16">
-            <div className="flex-shrink-0 flex items-center">
-              <Link
-                to="/"
-                className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium [&.active]:bg-gray-900"
-              >
-                Home
-              </Link>
-              <Link
-                to="/charts"
-                className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium [&.active]:bg-gray-900 ml-4"
-              >
-                Charts
-              </Link>
-            </div>
+      <NavigationMenu.Root className="w-full fixed top-0 left-0 right-0 z-10 bg-white">
+        <div className="container mx-auto px-4 relative">
+          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+          <div className="flex justify-between items-center h-16">
+            <NavigationMenu.List className="flex space-x-4">
+              <NavigationMenu.Item>
+                <NavigationMenu.Link asChild>
+                  <Link
+                    to="/"
+                    className="hover:text-secondary transition-colors duration-200 font-montserrat"
+                  >
+                    Home
+                  </Link>
+                </NavigationMenu.Link>
+              </NavigationMenu.Item>
+              <NavigationMenu.Item>
+                <NavigationMenu.Link asChild>
+                  <Link
+                    to="/charts"
+                    className="hover:text-secondary transition-colors duration-200 font-montserrat"
+                  >
+                    Charts
+                  </Link>
+                </NavigationMenu.Link>
+              </NavigationMenu.Item>
+            </NavigationMenu.List>
           </div>
         </div>
-      </nav>
-      <div className="pt-16">
+      </NavigationMenu.Root>
+      <div className="container mx-auto px-4 pt-20">
         {" "}
         {/* Add padding to account for fixed navbar */}
         <Outlet />

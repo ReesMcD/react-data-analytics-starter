@@ -6,7 +6,6 @@ import useCounterStore from "../../stores/counter/useCounterStore";
 
 function HomePage(): React.ReactNode {
   const { count } = useCounterStore();
-
   return (
     <PageWrapper>
       <div
