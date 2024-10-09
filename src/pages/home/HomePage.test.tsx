@@ -8,7 +8,6 @@ jest.mock("../../queries/useAllPostsQuery/useAllPostsQuery");
 jest.mock("../../queries/usePostQuery/usePostQuery");
 
 const mockPost = { id: 1, title: "Post 1", body: "Body 1" };
-
 const mockPosts = [mockPost, { id: 2, title: "Post 2", body: "Body 2" }];
 
 describe("HomePage Component", () => {
@@ -30,7 +29,6 @@ describe("HomePage Component", () => {
 
   it("should render the home page", async () => {
     renderHome();
-
     expect(screen.getByTestId("home-page-header")).toBeInTheDocument();
   });
 
@@ -38,7 +36,11 @@ describe("HomePage Component", () => {
     const { getByTestId } = renderHome();
     expect(getByTestId("all-posts-component")).toBeInTheDocument();
     expect(getByTestId("single-post")).toBeInTheDocument();
-    // TODO: add more tests for subcomponents
+  });
+
+  it("should render the correct post", async () => {
+    const { getByTestId } = renderHome();
+    expect(getByTestId("single-post")).toHaveTextContent("Post 1");
   });
 
   const renderHome = () => {
