@@ -1,6 +1,8 @@
 import PageWrapper from "../../components/page-wrapper/PageWrapper";
+import PlayerCard from "../../components/player-card/PlayerCard";
 import { usePlayerQuery } from "../../queries/usePlayerQuery/usePlayerQuery";
 import { Route } from "../../routes/player/$playerId";
+import { NFLPlayer } from "../../types/NFLPlayer";
 
 function PlayerPage(): React.ReactNode {
   const { playerId } = Route.useParams();
@@ -8,11 +10,10 @@ function PlayerPage(): React.ReactNode {
 
   return (
     <PageWrapper>
-      <div
-        className="flex justify-between items-center"
-        data-testid="player-page"
-      >
-        <h1>Player: {player?.name}</h1>
+      <div className="flex justify-start">
+        <div className="w-1/2">
+          <PlayerCard player={player as NFLPlayer} />
+        </div>
       </div>
     </PageWrapper>
   );

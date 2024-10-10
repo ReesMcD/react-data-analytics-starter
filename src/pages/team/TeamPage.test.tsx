@@ -1,4 +1,3 @@
-import { Route } from "@tanstack/react-router";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import { useTeamQuery } from "../../queries/useTeamQuery/useTeamQuery";
@@ -16,15 +15,15 @@ jest.mock("../../queries/useTeamQuery/useTeamQuery", () => ({
 
 describe("Team Page Component", () => {
   it("should render the Team page with the correct team name", () => {
-    const mockTeamId = "TB";
+    // const mockTeamId = "TB";
     const mockTeam = {
       id: "TB",
       name: "Buccaneers",
       fullName: "Tampa Bay Buccaneers",
     };
 
-    jest.mocked(Route.useParams).mockReturnValue({ teamId: mockTeamId });
-    jest.mocked(useTeamQuery).mockReturnValue({ data: mockTeam });
+    // jest.mocked(Route.useParams).mockReturnValue({ teamId: mockTeamId });
+    // jest.mocked(useTeamQuery).mockReturnValue({ data: mockTeam });
 
     render(<TeamPage />);
 
@@ -35,7 +34,7 @@ describe("Team Page Component", () => {
   it("should render loading state when team data is not available", () => {
     const mockTeamId = "TB";
 
-    (Route.useParams as jest.Mock).mockReturnValue({ teamId: mockTeamId });
+    // (Route.useParams as jest.Mock).mockReturnValue({ teamId: mockTeamId });
     (useTeamQuery as jest.Mock).mockReturnValue({
       data: undefined,
       isLoading: true,

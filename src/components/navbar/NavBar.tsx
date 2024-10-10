@@ -32,10 +32,35 @@ function Navbar() {
                   </Link>
                 </NavigationMenu.Link>
               </NavigationMenu.Item>
+              <NavigationMenu.Item>
+                <NavigationMenu.Trigger className="hover:text-secondary transition-colors duration-200 font-montserrat">
+                  Teams
+                </NavigationMenu.Trigger>
+                <NavigationMenu.Content className="absolute top-full left-0 w-auto bg-white shadow-lg rounded-md p-2">
+                  <NavigationMenu.Sub>
+                    <NavigationMenu.List className="grid grid-cols-auto gap-2 w-auto max-h-80 overflow-y-auto p-4">
+                      {teams?.map((team) => (
+                        <NavigationMenu.Item key={team.id}>
+                          <NavigationMenu.Link asChild>
+                            <Link
+                              to="/team/$teamId"
+                              params={{ teamId: team.id }}
+                              className="block px-4 py-2 hover:bg-gray-100 rounded-md transition-colors duration-200 font-montserrat"
+                            >
+                              {team.name}
+                            </Link>
+                          </NavigationMenu.Link>
+                        </NavigationMenu.Item>
+                      ))}
+                    </NavigationMenu.List>
+                  </NavigationMenu.Sub>
+                </NavigationMenu.Content>
+              </NavigationMenu.Item>
             </NavigationMenu.List>
           </div>
         </div>
       </NavigationMenu.Root>
+
       <div className="container mx-auto px-4 pt-20">
         {" "}
         {/* Add padding to account for fixed navbar */}
