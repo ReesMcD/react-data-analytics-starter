@@ -1,4 +1,4 @@
-import useCounterStore from "../../stores/counter/useCounterStore";
+import { useCounterStore } from "../../stores/counter/useCounterStore";
 
 function Counter(): React.ReactElement {
   const { count, inc } = useCounterStore();

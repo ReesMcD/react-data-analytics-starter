@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import useAllPostsQuery from "../../queries/useAllPostsQuery/useAllPostsQuery";
-import usePostQuery from "../../queries/usePostQuery/usePostQuery";
+import { useAllPostsQuery } from "../../queries/useAllPostsQuery/useAllPostsQuery";
+import { usePostQuery } from "../../queries/usePostQuery/usePostQuery";
 import HomePage from "./HomePage";
 
 jest.mock("../../queries/useAllPostsQuery/useAllPostsQuery");

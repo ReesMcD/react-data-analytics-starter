@@ -2,7 +2,7 @@ import { QueryClient } from "@tanstack/react-query";
 import { renderHook, waitFor } from "@testing-library/react";
 import { getAllPosts } from "../../services/PlaceholderService/PlaceholderService";
 import queryClientProviderTestWrapper from "../../utils/test/queryClientProviderTestWrapper";
-import useAllPostsQuery from "./useAllPostsQuery";
+import { useAllPostsQuery } from "./useAllPostsQuery";
 
 jest.mock("../../services/PlaceholderService/PlaceholderService");
 const queryClient = new QueryClient();

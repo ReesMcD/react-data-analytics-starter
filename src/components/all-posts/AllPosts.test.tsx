@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import useAllPostsQuery from "../../queries/useAllPostsQuery/useAllPostsQuery";
+import { useAllPostsQuery } from "../../queries/useAllPostsQuery/useAllPostsQuery";
 import AllPosts from "./AllPosts";
 
 jest.mock("../../queries/useAllPostsQuery/useAllPostsQuery");

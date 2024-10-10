@@ -1,4 +1,4 @@
-import useAllPostsQuery from "../../queries/useAllPostsQuery/useAllPostsQuery";
+import { useAllPostsQuery } from "../../queries/useAllPostsQuery/useAllPostsQuery";
 import Post from "../../types/Post";
 function AllPosts(): React.ReactElement {
   const { data: posts } = useAllPostsQuery();

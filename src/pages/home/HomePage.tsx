@@ -2,7 +2,7 @@ import AllPosts from "../../components/all-posts/AllPosts";
 import Counter from "../../components/counter/Counter";
 import PageWrapper from "../../components/page-wrapper/PageWrapper";
 import SinglePost from "../../components/single-post/SinglePost";
-import useCounterStore from "../../stores/counter/useCounterStore";
+import { useCounterStore } from "../../stores/counter/useCounterStore";
 
 function HomePage(): React.ReactNode {
   const { count } = useCounterStore();

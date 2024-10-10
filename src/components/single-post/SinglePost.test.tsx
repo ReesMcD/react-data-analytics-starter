@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import usePostQuery from "../../queries/usePostQuery/usePostQuery";
+import { usePostQuery } from "../../queries/usePostQuery/usePostQuery";
 import SinglePost from "./SinglePost";
 
 jest.mock("../../queries/usePostQuery/usePostQuery");

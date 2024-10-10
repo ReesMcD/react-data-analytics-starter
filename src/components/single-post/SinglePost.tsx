@@ -1,5 +1,5 @@
 import React from "react";
-import usePostQuery from "../../queries/usePostQuery/usePostQuery";
+import { usePostQuery } from "../../queries/usePostQuery/usePostQuery";
 
 interface SinglePostProps {
   id: number;

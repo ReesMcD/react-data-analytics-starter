@@ -1,7 +1,9 @@
-import { create } from "zustand";
+import { create, StateCreator } from "zustand";
 import CounterStore from "./CounterStore";
-import counterStoreCreator from "./counterStoreCreator";
 
-const useCounterStore = create<CounterStore>()(counterStoreCreator);
+export const counterStoreCreator: StateCreator<CounterStore> = (set) => ({
+  count: 1,
+  inc: () => set((state) => ({ count: state.count + 1 })),
+});
 
-export default useCounterStore;
+export const useCounterStore = create<CounterStore>()(counterStoreCreator);
