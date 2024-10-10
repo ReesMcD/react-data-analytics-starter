@@ -1,6 +1,6 @@
 import PageWrapper from "../../components/page-wrapper/PageWrapper";
 import { usePlayerQuery } from "../../queries/usePlayerQuery/usePlayerQuery";
-import { Route } from "../../routes/player.$playerId";
+import { Route } from "../../routes/player/$playerId";
 
 function PlayerPage(): React.ReactNode {
   const { playerId } = Route.useParams();

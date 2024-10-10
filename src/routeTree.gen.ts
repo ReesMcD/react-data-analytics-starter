@@ -13,8 +13,8 @@ import { createFileRoute } from '@tanstack/react-router'
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as TeamTeamIdImport } from './routes/team.$teamId'
-import { Route as PlayerPlayerIdImport } from './routes/player.$playerId'
+import { Route as TeamTeamIdImport } from './routes/team/$teamId'
+import { Route as PlayerPlayerIdImport } from './routes/player/$playerId'
 
 // Create Virtual Routes
 
@@ -36,12 +36,14 @@ const IndexLazyRoute = IndexLazyImport.update({
 const TeamTeamIdRoute = TeamTeamIdImport.update({
   path: '/team/$teamId',
   getParentRoute: () => rootRoute,
-} as any)
+} as any).lazy(() => import('./routes/team/$teamId.lazy').then((d) => d.Route))
 
 const PlayerPlayerIdRoute = PlayerPlayerIdImport.update({
   path: '/player/$playerId',
   getParentRoute: () => rootRoute,
-} as any)
+} as any).lazy(() =>
+  import('./routes/player/$playerId.lazy').then((d) => d.Route),
+)
 
 // Populate the FileRoutesByPath interface
 
@@ -150,10 +152,10 @@ export const routeTree = rootRoute
       "filePath": "charts.lazy.tsx"
     },
     "/player/$playerId": {
-      "filePath": "player.$playerId.tsx"
+      "filePath": "player/$playerId.tsx"
     },
     "/team/$teamId": {
-      "filePath": "team.$teamId.tsx"
+      "filePath": "team/$teamId.tsx"
     }
   }
 }

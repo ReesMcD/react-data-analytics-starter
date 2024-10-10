@@ -4,7 +4,7 @@ import { NFLTeam } from "../../types/NFLTeam";
 
 export const getTeamsQuery = () =>
   queryOptions<NFLTeam[], Error>({
-    queryKey: ["allTeams"],
+    queryKey: ["getTeams"],
     queryFn: getTeams,
     staleTime: Infinity,
   });

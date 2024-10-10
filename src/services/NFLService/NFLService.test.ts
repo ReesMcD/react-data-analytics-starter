@@ -2,17 +2,17 @@ import { NFLPlayer } from "../../types/NFLPlayer";
 import { NFLTeam } from "../../types/NFLTeam";
 import { get } from "../../utils/client/get";
 import {
-  getAllPlayers,
-  getAllTeams,
   getPlayer,
+  getPlayers,
   getTeam,
+  getTeams,
   NFL_DATA_URL,
 } from "./NFLService";
 
 jest.mock("../../utils/client/get");
 
 describe("NFLService", () => {
-  describe("getAllPlayers", () => {
+  describe("getPlayers", () => {
     it("should fetch all players successfully", async () => {
       const mockPlayers: NFLPlayer[] = [
         {
@@ -38,7 +38,7 @@ describe("NFLService", () => {
       ];
       (get as jest.Mock).mockResolvedValue(mockPlayers);
 
-      const result = await getAllPlayers();
+      const result = await getPlayers();
 
       expect(get).toHaveBeenCalledWith(`${NFL_DATA_URL}/nfl_players.json`);
       expect(result).toEqual(mockPlayers);
@@ -99,7 +99,7 @@ describe("NFLService", () => {
     });
   });
 
-  describe("getAllTeams", () => {
+  describe("getTeams", () => {
     it("should fetch all teams successfully", async () => {
       const mockTeams: NFLTeam[] = [
         {
@@ -125,7 +125,7 @@ describe("NFLService", () => {
       ];
       (get as jest.Mock).mockResolvedValue(mockTeams);
 
-      const result = await getAllTeams();
+      const result = await getTeams();
 
       expect(get).toHaveBeenCalledWith(`${NFL_DATA_URL}/nfl_teams.json`);
       expect(result).toEqual(mockTeams);

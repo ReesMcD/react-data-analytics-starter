@@ -4,12 +4,12 @@ import { get } from "../../utils/client/get";
 
 export const NFL_DATA_URL = "/data";
 
-export async function getAllPlayers(): Promise<NFLPlayer[]> {
+export async function getPlayers(): Promise<NFLPlayer[]> {
   console.log("Fetching all NFL players");
   try {
     return await get<NFLPlayer[]>(`${NFL_DATA_URL}/nfl_players.json`);
   } catch (error) {
-    console.error("Error in NFLService getAllPlayers:", error);
+    console.error("Error in NFLService getPlayers:", error);
     throw error;
   }
 }
@@ -25,12 +25,12 @@ export async function getPlayer(id: string): Promise<NFLPlayer | undefined> {
   }
 }
 
-export async function getAllTeams(): Promise<NFLTeam[]> {
+export async function getTeams(): Promise<NFLTeam[]> {
   console.log("Fetching all NFL teams");
   try {
     return await get<NFLTeam[]>(`${NFL_DATA_URL}/nfl_teams.json`);
   } catch (error) {
-    console.error("Error in NFLService getAllTeams:", error);
+    console.error("Error in NFLService getTeams:", error);
     throw error;
   }
 }

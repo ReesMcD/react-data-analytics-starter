@@ -4,10 +4,10 @@ import { NFLPlayer } from "../../types/NFLPlayer";
 
 export const getPlayerQuery = (playerId: string) =>
   queryOptions<NFLPlayer | undefined, Error>({
-    queryKey: ["player", playerId],
+    queryKey: ["getPlayer", playerId],
     queryFn: () => getPlayer(playerId),
     refetchOnWindowFocus: false,
-    staleTime: 300000,
+    staleTime: Infinity,
   });
 
 export const usePlayerQuery = (playerId: string) =>

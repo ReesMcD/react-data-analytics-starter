@@ -1,11 +1,10 @@
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { Link, Outlet } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
-import { useAllTeamsQuery } from "../../queries/useAllTeamsQuery/useAllTeamsQuery";
+import { useTeamsQuery } from "../../queries/useTeamsQuery/useTeamsQuery";
 
 function Navbar() {
-  const { data: teams } = useAllTeamsQuery();
-  console.log(teams);
+  const { data: teams } = useTeamsQuery();
   return (
     <>
       <NavigationMenu.Root className="w-full fixed top-0 left-0 right-0 z-10 bg-white">
